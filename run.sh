@@ -2,7 +2,7 @@
 
 set -e
 
-export CASSANDRA_CQL_HOST_LIST=${CASSANDRA_CQL_HOST_LIST:-"cassandra:9160"}
+export CASSANDRA_CQL_HOST_LIST=${CASSANDRA_CQL_HOST_LIST:-"cassandra:9042"}
 
 envsubst < $KAIROSDB_HOME/conf/kairosdb.properties.env > $KAIROSDB_HOME/conf/kairosdb.properties
 
