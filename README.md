@@ -6,9 +6,15 @@ List is in the form: `1.1.1.1,1.1.1.2`.
 
 Default: `cassandra:9042`
 
-### `CASSANDRA_WAIT_TIMEOUT`
+### `DOCKERIZE_WAIT`
 
-Wait for cassandra to become available; useful for docker-compose, but should
-probably be lowered for production usage.
+Wait for the first host in `CASSANDRA_CQL_HOST_LIST` to become available. Should
+be set to `true` inside docker-compose, and unset in production.
+
+Default: unset
+
+### `DOCKERIZE_WAIT_TIMEOUT`
+
+Timeout; used only when DOCKERIZE_WAIT is set.
 
 Default: `30s`
